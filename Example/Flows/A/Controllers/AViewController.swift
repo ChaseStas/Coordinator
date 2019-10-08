@@ -6,10 +6,9 @@
 //  Copyright © 2019 StasParechyn. All rights reserved.
 //
 
-import UIKit
 import Coordinator
 
-class AViewController: BaseVC {
+class AViewController: BaseVC, AViewOutput {
     var onButtonTap: (() -> Void)?
     
     // MARK: - Lifecycle

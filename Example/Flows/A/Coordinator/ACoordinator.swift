@@ -11,29 +11,32 @@ import Coordinator
 import UIKit
 
 final class ACoordinator: BaseCoordinator {
-    weak var nvc: UINavigationController?
-    init(_ nvc: UINavigationController?) {
-        self.nvc = nvc
+    private let factory: AFactoryProtocol = AFactory()
+    private let router: Router
+    init(_ router: Router) {
+        self.router = router
         super.init()
     }
     
     override func start() {
-        let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AViewController") as! AViewController
-        a.onButtonTap = { [weak self, weak a] in
-            self?.startNextScreen(a)
+        let view = factory.makeMainView()
+        view.onButtonTap = { [weak self] in
+            self?.goToNextScreen()
         }
-        self.setDeallocallable(with: a)
-        nvc?.setViewControllers([a], animated: false)
+        self.setDeallocallable(with: view)
+        router.setRoot(view)
     }
 }
 
 private extension ACoordinator {
-    func startNextScreen(_ a: UIViewController?) {
-        let newCoord = BCoordinator(a)
+    func goToNextScreen() {
+        let newCoord = BCoordinator()
         self.addChild(newCoord)
         newCoord.onFinish = { [weak self] coord in
             self?.removeChild(coord)
         }
         newCoord.start()
+        router.present(newCoord.router)
+        
     }
 }

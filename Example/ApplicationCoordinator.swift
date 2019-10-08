@@ -11,11 +11,10 @@ import Coordinator
 import UIKit
 
 final class ApplicationCoordinator: BaseCoordinator {
+    private let router: Router
     
-    weak var navigationController: UINavigationController?
-    
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(navigationController: BaseView) {
+        self.router = Router(navigationController)
         super.init()
     }
     
@@ -24,7 +23,7 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     func goToACoordinator() {
-        let coord = ACoordinator(self.navigationController)
+        let coord = ACoordinator(router)
         addChild(coord)
         coord.start()
     }

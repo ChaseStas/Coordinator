@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Coordinator
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        guard let nvc = window?.rootViewController as? UINavigationController else { return }
+        guard let nvc = window?.rootViewController as? BaseView else { return }
         self.appCoordinator = ApplicationCoordinator(navigationController: nvc)
         appCoordinator?.start()
     }

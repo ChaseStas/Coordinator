@@ -9,7 +9,7 @@
 import UIKit
 import Coordinator
 
-class BViewController: BaseVC {
+class BViewController: BaseVC, BViewOutput {
     var onButtonTap: (() -> Void)?
         
     override func viewDidLoad() {

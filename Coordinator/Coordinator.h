@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 //! Project version number for Coordinator.
 FOUNDATION_EXPORT double CoordinatorVersionNumber;
 
