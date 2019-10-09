@@ -12,9 +12,9 @@ import UIKit
 
 final class ACoordinator: BaseCoordinator {
     private let factory: AFactoryProtocol = AFactory()
-    private let router: Router
-    init(_ router: Router) {
-        self.router = router
+    var router: Router!
+    
+    override init() {
         super.init()
     }
     
@@ -23,20 +23,18 @@ final class ACoordinator: BaseCoordinator {
         view.onButtonTap = { [weak self] in
             self?.goToNextScreen()
         }
+        self.router = Router(view)
         self.setDeallocallable(with: view)
-        router.setRoot(view)
     }
 }
 
 private extension ACoordinator {
     func goToNextScreen() {
         let newCoord = BCoordinator()
-        self.addChild(newCoord)
         newCoord.onFinish = { [weak self] coord in
             self?.removeChild(coord)
         }
-        newCoord.start()
+        self.addChildAndStart(newCoord)
         router.present(newCoord.router)
-        
     }
 }

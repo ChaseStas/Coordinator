@@ -41,7 +41,9 @@ public extension Router {
 public extension Router {
     private var navigationRootController: UINavigationController {
         guard let nvc = rootViewController as? UINavigationController else {
-            fatalError("😱 Your root view controller is not UINavigationController or nil. Fix that and try again 😱")
+            guard let nvc = rootViewController?.navigationController else {            fatalError("😱 Your root view controller is not UINavigationController or in navigation controller stack. Fix that and try again 😱")
+            }
+            return nvc
         }
         return nvc
     }

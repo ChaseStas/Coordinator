@@ -14,8 +14,11 @@ open class BaseCoordinator: Coordinator, DeallocallableProtocol {
     
     public init(){
     }
-    
     open func start() {}
+    
+    deinit {
+        print("Coordinator \(self) deallocated😏")
+    }
 }
 
 public extension BaseCoordinator {
@@ -26,7 +29,7 @@ public extension BaseCoordinator {
             return
         }
         deallocallable?.onDeinit = nil
-        object.onDeinit = {[weak self] in
+        object.onDeinit = { [weak self] in
             guard let this = self else { return }
             this.onFinish?(this)
         }

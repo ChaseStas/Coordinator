@@ -235,11 +235,10 @@
 		AB40EE3B23475FEC0091070B /* B */ = {
 			isa = PBXGroup;
 			children = (
-				AB40EE3723475FBE0091070B /* BViewController.swift */,
-				AB1B8ACF234CB187004D1952 /* BFactory.swift */,
-				AB1B8AD1234CB198004D1952 /* BViewOutput.swift */,
-				AB40EE49234764580091070B /* BCoordinator.swift */,
-				AB1B8ACD234CB06F004D1952 /* BStoryboard.storyboard */,
+				ABB1FAF0234D2FEA004278DE /* Controller */,
+				ABB1FAF1234D2FF3004278DE /* Factory */,
+				ABB1FAF2234D2FF7004278DE /* Coordinator */,
+				ABB1FAF3234D2FFC004278DE /* Storyboard */,
 			);
 			path = B;
 			sourceTree = "<group>";
@@ -249,6 +248,39 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABB1FAF0234D2FEA004278DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB40EE3723475FBE0091070B /* BViewController.swift */,
+				AB1B8AD1234CB198004D1952 /* BViewOutput.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABB1FAF1234D2FF3004278DE /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				AB1B8ACF234CB187004D1952 /* BFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		ABB1FAF2234D2FF7004278DE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AB40EE49234764580091070B /* BCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		ABB1FAF3234D2FFC004278DE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AB1B8ACD234CB06F004D1952 /* BStoryboard.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		ABBF75CC234C9E6300B9FE12 /* Factory */ = {

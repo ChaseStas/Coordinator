@@ -23,8 +23,8 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     func goToACoordinator() {
-        let coord = ACoordinator(router)
-        addChild(coord)
-        coord.start()
+        let coord = ACoordinator()
+        addChildAndStart(coord)
+        router.setRoot(coord.router.toPresent())
     }
 }

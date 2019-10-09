@@ -21,6 +21,11 @@ public extension Coordinator {
         childCoordinators.append(coordinator)
     }
     
+    func addChildAndStart(_ coordinator: Coordinator) {
+        self.addChild(coordinator)
+        coordinator.start()
+    }
+    
     func removeChild(_ coordinator: Coordinator) {
         guard let index = childCoordinators.firstIndex(where: { $0 === coordinator }) else {
             print("Couldn't remove coordinator \(coordinator)")

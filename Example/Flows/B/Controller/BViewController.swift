@@ -16,7 +16,7 @@ class BViewController: BaseVC, BViewOutput {
         super.viewDidLoad()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction func didTapButton() {
         onButtonTap?()
     }
 }

@@ -9,5 +9,5 @@
 import Coordinator
 
 protocol BViewOutput: BaseView {
-    
+    var onButtonTap: (() -> Void)? {get set }
 }
