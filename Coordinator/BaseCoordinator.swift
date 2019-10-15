@@ -12,8 +12,8 @@ open class BaseCoordinator: Coordinator, DeallocallableProtocol {
     
     weak var deallocallable: Deinitcallable?
     
-    public init(){
-    }
+    public init(){}
+    
     open func start() {}
     
     deinit {

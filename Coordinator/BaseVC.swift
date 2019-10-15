@@ -14,3 +14,21 @@ open class BaseVC: UIViewController, Deinitcallable {
         print("Deinit of \(self)")
     }
 }
+
+open class BaseTVC: UITableViewController, Deinitcallable {
+    public var onDeinit: (() -> Void)?
+    
+    deinit {
+        onDeinit?()
+        print("Deinit of \(self)")
+    }
+}
+
+open class BaseTBC: UITabBarController, Deinitcallable {
+    public var onDeinit: (() -> Void)?
+    
+    deinit {
+        onDeinit?()
+        print("Deinit of \(self)")
+    }
+}

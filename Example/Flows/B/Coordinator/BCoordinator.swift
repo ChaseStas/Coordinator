@@ -21,14 +21,16 @@ final class BCoordinator: BaseCoordinator {
     override func start() {
         let view = factory.makeBView()
         view.onButtonTap = { [weak self] in
-            let newCoord = ACoordinator()
-            newCoord.onFinish = { [weak self] coord in
-                self?.removeChild(coord)
-            }
-            self?.addChildAndStart(newCoord)
-            self?.router.present(newCoord.router)
+            self?.goToA1()
         }
         self.setDeallocallable(with: view)
-        self.router = Router(view)
+        self.router = Router(rootForNavController: view)
+    }
+}
+
+private extension BCoordinator {
+    func goToA1() {
+        let view = factory.makeB1View()
+        router.push(view)
     }
 }

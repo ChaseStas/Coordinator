@@ -10,11 +10,17 @@ final public class Router: Presentable {
     private weak var rootViewController: UIViewController?  {
         return view?.toPresent()
     }
+    
     private weak var view: BaseView?
     
+    /// Initialize Router with view as root
     public init(_ view: BaseView) {
-//        self.rootViewController = view.toPresent()
         self.view = view
+    }
+    /// Initialize Router with navigation controller and set view as root
+    public init(rootForNavController view: BaseView) {
+        let nvc = UINavigationController(rootViewController: view.toPresent())
+        self.view = nvc
     }
     
     public func toPresent() -> UIViewController {

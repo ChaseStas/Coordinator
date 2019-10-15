@@ -36,6 +36,7 @@
 		ABBF75D6234CA7E300B9FE12 /* AViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */; };
 		ABBF75D8234CA7FF00B9FE12 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D7234CA7FF00B9FE12 /* BaseView.swift */; };
 		ABBF75DA234CA85F00B9FE12 /* AFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D9234CA85F00B9FE12 /* AFactory.swift */; };
+		ABCD88EC23566BF3004355A7 /* B1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCD88EB23566BF3004355A7 /* B1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewOutput.swift; sourceTree = "<group>"; };
 		ABBF75D7234CA7FF00B9FE12 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		ABBF75D9234CA85F00B9FE12 /* AFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFactory.swift; sourceTree = "<group>"; };
+		ABCD88EB23566BF3004355A7 /* B1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			children = (
 				AB40EE3723475FBE0091070B /* BViewController.swift */,
 				AB1B8AD1234CB198004D1952 /* BViewOutput.swift */,
+				ABCD88EB23566BF3004355A7 /* B1ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				AB40EE2623475F9A0091070B /* AppDelegate.swift in Sources */,
 				AB40EE2823475F9A0091070B /* SceneDelegate.swift in Sources */,
 				AB40EE3F2347602B0091070B /* ApplicationCoordinator.swift in Sources */,
+				ABCD88EC23566BF3004355A7 /* B1ViewController.swift in Sources */,
 				AB40EE4A234764580091070B /* BCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@ import Coordinator
 
 protocol BFactoryProtocol {
     func makeBView() -> BViewOutput
+    func makeB1View() -> B1ViewOutput
 }
 
 struct BFactory: Factory, BFactoryProtocol {
@@ -19,5 +20,9 @@ struct BFactory: Factory, BFactoryProtocol {
     
     func makeBView() -> BViewOutput {
         storyboard.instantiateViewController(identifier: "BViewController") as! BViewOutput
+    }
+    
+    func makeB1View() -> B1ViewOutput {
+        return B1ViewController()
     }
 }
