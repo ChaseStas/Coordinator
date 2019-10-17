@@ -9,5 +9,8 @@
 import Coordinator
 
 protocol AViewOutput: BaseView {
-    var onButtonTap: (() -> Void)? {get set}
+    var onPushTap: (() -> Void)? {get set}
+    var onPresentFullScreenTap: (() -> Void)? {get set}
+    var onPresentTap: (() -> Void)? {get set}
+    var onDismissTap: (() -> Void)? {get set}
 }

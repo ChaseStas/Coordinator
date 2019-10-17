@@ -15,19 +15,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrP-Op-Nav">
-                                <rect key="frame" x="165.5" y="424.5" width="83" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didTapButton" destination="7rD-4n-bqM" eventType="touchUpInside" id="HH3-QV-1Qw"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Oa-irM">
+                                <rect key="frame" x="30" y="324" width="354" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrP-Op-Nav">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="Present"/>
+                                        <connections>
+                                            <action selector="didTapPresent" destination="7rD-4n-bqM" eventType="touchUpInside" id="573-4m-lU2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vd-Zh-iz3">
+                                        <rect key="frame" x="0.0" y="67" width="354" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="Present full screen"/>
+                                        <connections>
+                                            <action selector="didTapPresentFullScreen" destination="7rD-4n-bqM" eventType="touchUpInside" id="7Ey-1k-JPZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li5-XU-jYB">
+                                        <rect key="frame" x="0.0" y="134" width="354" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="Push"/>
+                                        <connections>
+                                            <action selector="didTapPush" destination="7rD-4n-bqM" eventType="touchUpInside" id="pcE-xn-Rb6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSF-6U-f69">
+                                        <rect key="frame" x="0.0" y="201" width="354" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <connections>
+                                            <action selector="didTapDismiss" destination="7rD-4n-bqM" eventType="touchUpInside" id="3s2-Uy-XES"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CrP-Op-Nav" firstAttribute="centerY" secondItem="wsK-mt-OTh" secondAttribute="centerY" id="ERV-ja-scQ"/>
-                            <constraint firstItem="CrP-Op-Nav" firstAttribute="centerX" secondItem="wsK-mt-OTh" secondAttribute="centerX" id="gx5-wI-83E"/>
+                            <constraint firstItem="lol-Oa-irM" firstAttribute="centerX" secondItem="wsK-mt-OTh" secondAttribute="centerX" id="EBp-Jx-m9p"/>
+                            <constraint firstItem="lol-Oa-irM" firstAttribute="centerY" secondItem="wsK-mt-OTh" secondAttribute="centerY" id="MBI-Rc-OvC"/>
+                            <constraint firstItem="lol-Oa-irM" firstAttribute="leading" secondItem="oRQ-E8-52T" secondAttribute="leading" constant="30" id="MOU-Kl-ydY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oRQ-E8-52T"/>
                     </view>

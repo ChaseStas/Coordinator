@@ -17,7 +17,7 @@ open class BaseCoordinator: Coordinator, DeallocallableProtocol {
     open func start() {}
     
     deinit {
-        print("Coordinator \(self) deallocated😏")
+        log("Coordinator \(self) deallocated😏")
     }
 }
 
@@ -25,7 +25,7 @@ public extension BaseCoordinator {
     /// sets the key Deallocallable object for a coordinator, this enables dealloaction of the coordinator once the object gets deallocated via onDeinit closure, only one key object can be active at a time. Calling this func multiple times in the life cycle of a coordinator will just replace previous key object
      func setDeallocallable(with object: BaseView) {
         guard let object = object as? Deinitcallable else {
-            print("🧐 setDeallocallable called, but object isn't conform to Deinitcallable")
+            log("🧐 setDeallocallable called, but object isn't conform to Deinitcallable")
             return
         }
         deallocallable?.onDeinit = nil

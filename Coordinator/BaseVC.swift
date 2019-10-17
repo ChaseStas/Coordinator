@@ -11,7 +11,7 @@ open class BaseVC: UIViewController, Deinitcallable {
     
     deinit {
         onDeinit?()
-        print("Deinit of \(self)")
+        log("Deinit of \(self)")
     }
 }
 
@@ -20,7 +20,7 @@ open class BaseTVC: UITableViewController, Deinitcallable {
     
     deinit {
         onDeinit?()
-        print("Deinit of \(self)")
+        log("Deinit of \(self)")
     }
 }
 
@@ -29,6 +29,6 @@ open class BaseTBC: UITabBarController, Deinitcallable {
     
     deinit {
         onDeinit?()
-        print("Deinit of \(self)")
+        log("Deinit of \(self)")
     }
 }

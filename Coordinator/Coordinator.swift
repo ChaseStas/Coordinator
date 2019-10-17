@@ -28,7 +28,7 @@ public extension Coordinator {
     
     func removeChild(_ coordinator: Coordinator) {
         guard let index = childCoordinators.firstIndex(where: { $0 === coordinator }) else {
-            print("Couldn't remove coordinator \(coordinator)")
+            log("Couldn't remove coordinator \(coordinator)")
             return
         }
         childCoordinators.remove(at: index)

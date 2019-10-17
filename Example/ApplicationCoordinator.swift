@@ -11,20 +11,18 @@ import Coordinator
 import UIKit
 
 final class ApplicationCoordinator: BaseCoordinator {
-    private let router: Router
+    private weak var window: UIWindow?
     
-    init(navigationController: BaseView) {
-        self.router = Router(navigationController)
+    init(window: UIWindow?) {
+        self.window = window
         super.init()
     }
     
     override func start() {
-        goToACoordinator()
-    }
-    
-    func goToACoordinator() {
         let coord = ACoordinator()
         addChildAndStart(coord)
-        router.setRoot(coord.router.toPresent())
+        
+        self.window?.rootViewController = coord.router.toPresent()
+        self.window?.makeKeyAndVisible()
     }
 }

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Coordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-       
+        
+        // Uncomment if you want to turn off logs
+//        CoordinatorConfig.enableLogs = false
         return true
     }
 
