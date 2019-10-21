@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		AB1B8ACC234CB067004D1952 /* AStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1B8ACB234CB067004D1952 /* AStoryboard.storyboard */; };
+		AB382C68235DD6020053262A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C5F235DD6010053262A /* BaseVC.swift */; };
+		AB382C69235DD6020053262A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C60235DD6010053262A /* BaseView.swift */; };
+		AB382C6A235DD6020053262A /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C61235DD6010053262A /* Factory.swift */; };
+		AB382C6B235DD6020053262A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C62235DD6010053262A /* Coordinator.swift */; };
+		AB382C6C235DD6020053262A /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C63235DD6010053262A /* Presentable.swift */; };
+		AB382C6D235DD6020053262A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C64235DD6010053262A /* BaseCoordinator.swift */; };
+		AB382C6E235DD6020053262A /* Deinit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C65235DD6020053262A /* Deinit.swift */; };
+		AB382C6F235DD6020053262A /* CoordinatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C66235DD6020053262A /* CoordinatorConfig.swift */; };
+		AB382C70235DD6020053262A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB382C67235DD6020053262A /* Router.swift */; };
 		AB40EDF523475B850091070B /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40EDEB23475B840091070B /* Coordinator.framework */; };
 		AB40EDFA23475B850091070B /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EDF923475B850091070B /* CoordinatorTests.swift */; };
 		AB40EDFC23475B850091070B /* Coordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = AB40EDEE23475B850091070B /* Coordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB40EE0623475BD10091070B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE0523475BD10091070B /* Coordinator.swift */; };
 		AB40EE2623475F9A0091070B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE2523475F9A0091070B /* AppDelegate.swift */; };
 		AB40EE2823475F9A0091070B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE2723475F9A0091070B /* SceneDelegate.swift */; };
 		AB40EE2A23475F9A0091070B /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE2923475F9A0091070B /* AViewController.swift */; };
@@ -21,16 +29,8 @@
 		AB40EE3D234760090091070B /* ACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE3C234760090091070B /* ACoordinator.swift */; };
 		AB40EE3F2347602B0091070B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE3E2347602B0091070B /* ApplicationCoordinator.swift */; };
 		AB40EE48234761A10091070B /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40EDEB23475B840091070B /* Coordinator.framework */; };
-		AB41FD272348E5CD00E3AE2B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41FD262348E5CD00E3AE2B /* BaseCoordinator.swift */; };
-		AB461B4423588868005D7193 /* CoordinatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB461B4323588868005D7193 /* CoordinatorConfig.swift */; };
 		AB820A79234B3FD000884EF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB820A78234B3FD000884EF7 /* README.md */; };
-		AB820A7B234B3FFF00884EF7 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB820A7A234B3FFF00884EF7 /* BaseVC.swift */; };
-		AB820A7D234B401100884EF7 /* Deinit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB820A7C234B401100884EF7 /* Deinit.swift */; };
-		ABBF75CE234C9E6D00B9FE12 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75CD234C9E6D00B9FE12 /* Factory.swift */; };
-		ABBF75D1234CA09900B9FE12 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D0234CA09900B9FE12 /* Router.swift */; };
-		ABBF75D3234CA3F200B9FE12 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D2234CA3F200B9FE12 /* Presentable.swift */; };
 		ABBF75D6234CA7E300B9FE12 /* AViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */; };
-		ABBF75D8234CA7FF00B9FE12 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D7234CA7FF00B9FE12 /* BaseView.swift */; };
 		ABBF75DA234CA85F00B9FE12 /* AFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D9234CA85F00B9FE12 /* AFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,13 +53,22 @@
 
 /* Begin PBXFileReference section */
 		AB1B8ACB234CB067004D1952 /* AStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AStoryboard.storyboard; sourceTree = "<group>"; };
+		AB382C5B235DD5760053262A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		AB382C5F235DD6010053262A /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseVC.swift; path = Sources/Coordinator/BaseVC.swift; sourceTree = SOURCE_ROOT; };
+		AB382C60235DD6010053262A /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Sources/Coordinator/Router/BaseView.swift; sourceTree = SOURCE_ROOT; };
+		AB382C61235DD6010053262A /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Factory.swift; path = Sources/Coordinator/Factory/Factory.swift; sourceTree = SOURCE_ROOT; };
+		AB382C62235DD6010053262A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Sources/Coordinator/Coordinator.swift; sourceTree = SOURCE_ROOT; };
+		AB382C63235DD6010053262A /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presentable.swift; path = Sources/Coordinator/Router/Presentable.swift; sourceTree = SOURCE_ROOT; };
+		AB382C64235DD6010053262A /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseCoordinator.swift; path = Sources/Coordinator/BaseCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		AB382C65235DD6020053262A /* Deinit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deinit.swift; path = Sources/Coordinator/Deinit.swift; sourceTree = SOURCE_ROOT; };
+		AB382C66235DD6020053262A /* CoordinatorConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordinatorConfig.swift; path = Sources/Coordinator/CoordinatorConfig.swift; sourceTree = SOURCE_ROOT; };
+		AB382C67235DD6020053262A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Sources/Coordinator/Router/Router.swift; sourceTree = SOURCE_ROOT; };
 		AB40EDEB23475B840091070B /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB40EDEE23475B850091070B /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
 		AB40EDEF23475B850091070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB40EDF423475B850091070B /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB40EDF923475B850091070B /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		AB40EDFB23475B850091070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB40EE0523475BD10091070B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AB40EE2323475F990091070B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB40EE2523475F9A0091070B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB40EE2723475F9A0091070B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,16 +79,8 @@
 		AB40EE3323475F9A0091070B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB40EE3C234760090091070B /* ACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACoordinator.swift; sourceTree = "<group>"; };
 		AB40EE3E2347602B0091070B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		AB41FD262348E5CD00E3AE2B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		AB461B4323588868005D7193 /* CoordinatorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorConfig.swift; sourceTree = "<group>"; };
 		AB820A78234B3FD000884EF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AB820A7A234B3FFF00884EF7 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		AB820A7C234B401100884EF7 /* Deinit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deinit.swift; sourceTree = "<group>"; };
-		ABBF75CD234C9E6D00B9FE12 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		ABBF75D0234CA09900B9FE12 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		ABBF75D2234CA3F200B9FE12 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewOutput.swift; sourceTree = "<group>"; };
-		ABBF75D7234CA7FF00B9FE12 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		ABBF75D9234CA85F00B9FE12 /* AFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +144,29 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		AB382C71235DD7DE0053262A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				AB382C61235DD6010053262A /* Factory.swift */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		AB382C72235DD7E70053262A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB382C60235DD6010053262A /* BaseView.swift */,
+				AB382C63235DD6010053262A /* Presentable.swift */,
+				AB382C67235DD6020053262A /* Router.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		AB40EDE123475B840091070B = {
 			isa = PBXGroup;
 			children = (
 				AB820A78234B3FD000884EF7 /* README.md */,
+				AB382C5B235DD5760053262A /* Package.swift */,
 				AB40EDED23475B840091070B /* Coordinator */,
 				AB40EDF823475B850091070B /* CoordinatorTests */,
 				AB40EE2423475F9A0091070B /* Example */,
@@ -169,13 +189,13 @@
 			isa = PBXGroup;
 			children = (
 				AB40EDEE23475B850091070B /* Coordinator.h */,
-				AB461B4323588868005D7193 /* CoordinatorConfig.swift */,
-				AB40EE0523475BD10091070B /* Coordinator.swift */,
-				AB41FD262348E5CD00E3AE2B /* BaseCoordinator.swift */,
-				AB820A7C234B401100884EF7 /* Deinit.swift */,
-				AB820A7A234B3FFF00884EF7 /* BaseVC.swift */,
-				ABBF75CF234CA08F00B9FE12 /* Router */,
-				ABBF75CC234C9E6300B9FE12 /* Factory */,
+				AB382C64235DD6010053262A /* BaseCoordinator.swift */,
+				AB382C5F235DD6010053262A /* BaseVC.swift */,
+				AB382C62235DD6010053262A /* Coordinator.swift */,
+				AB382C66235DD6020053262A /* CoordinatorConfig.swift */,
+				AB382C65235DD6020053262A /* Deinit.swift */,
+				AB382C71235DD7DE0053262A /* Factory */,
+				AB382C72235DD7E70053262A /* Router */,
 				AB40EDEF23475B850091070B /* Info.plist */,
 			);
 			path = Coordinator;
@@ -229,24 +249,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ABBF75CC234C9E6300B9FE12 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				ABBF75CD234C9E6D00B9FE12 /* Factory.swift */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		ABBF75CF234CA08F00B9FE12 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				ABBF75D0234CA09900B9FE12 /* Router.swift */,
-				ABBF75D7234CA7FF00B9FE12 /* BaseView.swift */,
-				ABBF75D2234CA3F200B9FE12 /* Presentable.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,15 +395,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB820A7D234B401100884EF7 /* Deinit.swift in Sources */,
-				AB40EE0623475BD10091070B /* Coordinator.swift in Sources */,
-				AB820A7B234B3FFF00884EF7 /* BaseVC.swift in Sources */,
-				AB461B4423588868005D7193 /* CoordinatorConfig.swift in Sources */,
-				AB41FD272348E5CD00E3AE2B /* BaseCoordinator.swift in Sources */,
-				ABBF75D1234CA09900B9FE12 /* Router.swift in Sources */,
-				ABBF75CE234C9E6D00B9FE12 /* Factory.swift in Sources */,
-				ABBF75D3234CA3F200B9FE12 /* Presentable.swift in Sources */,
-				ABBF75D8234CA7FF00B9FE12 /* BaseView.swift in Sources */,
+				AB382C6A235DD6020053262A /* Factory.swift in Sources */,
+				AB382C69235DD6020053262A /* BaseView.swift in Sources */,
+				AB382C70235DD6020053262A /* Router.swift in Sources */,
+				AB382C6B235DD6020053262A /* Coordinator.swift in Sources */,
+				AB382C6F235DD6020053262A /* CoordinatorConfig.swift in Sources */,
+				AB382C6E235DD6020053262A /* Deinit.swift in Sources */,
+				AB382C6D235DD6020053262A /* BaseCoordinator.swift in Sources */,
+				AB382C68235DD6020053262A /* BaseVC.swift in Sources */,
+				AB382C6C235DD6020053262A /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

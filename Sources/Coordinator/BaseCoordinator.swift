@@ -5,6 +5,7 @@
 //  Created by Stas Parechyn on 10/5/19.
 //  Copyright © 2019 StasParechyn. All rights reserved.
 //
+import UIKit
 
 open class BaseCoordinator: Coordinator, DeallocallableProtocol {
     public var childCoordinators: [Coordinator] = []
