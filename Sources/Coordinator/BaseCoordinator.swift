@@ -7,7 +7,7 @@
 //
 import UIKit
 
-open class BaseCoordinator: Coordinator, DeallocallableProtocol {
+open class BaseCoordinator<T:CaseIterable & Hashable>: Coordinator, DeallocallableProtocol {
     public var childCoordinators: [Coordinator] = []
     public var onFinish: ((Coordinator) -> Void)?
     
@@ -15,7 +15,12 @@ open class BaseCoordinator: Coordinator, DeallocallableProtocol {
     
     public init(){}
     
-    open func start() {}
+    open func start(_ option: T? = nil) {}
+    
+    open func addChildAndStart(_ coordinator: BaseCoordinator, _ option: T? = nil) {
+        self.addChild(coordinator)
+        coordinator.start(option)
+    }
     
     deinit {
         log("Coordinator \(self) deallocated😏")

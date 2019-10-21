@@ -10,7 +10,11 @@ import Foundation
 import Coordinator
 import UIKit
 
-final class ApplicationCoordinator: BaseCoordinator {
+enum DeepLinkOption: CaseIterable {
+    case aScreen
+}
+
+final class ApplicationCoordinator: BaseCoordinator<DeepLinkOption> {
     private weak var window: UIWindow?
     
     init(window: UIWindow?) {
@@ -18,9 +22,9 @@ final class ApplicationCoordinator: BaseCoordinator {
         super.init()
     }
     
-    override func start() {
+    override func start(_ option: DeepLinkOption? = nil) {
         let coord = ACoordinator()
-        addChildAndStart(coord)
+        addChildAndStart(coord, option)
         
         self.window?.rootViewController = coord.router.toPresent()
         self.window?.makeKeyAndVisible()

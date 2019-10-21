@@ -12,18 +12,12 @@ public protocol Coordinator: class {
     
     var childCoordinators: [Coordinator] {get set}
     
-    func start()
     var onFinish: ((Coordinator) -> Void)? { get set }
 }
 
 public extension Coordinator {
     func addChild(_ coordinator: Coordinator) {
         childCoordinators.append(coordinator)
-    }
-    
-    func addChildAndStart(_ coordinator: Coordinator) {
-        self.addChild(coordinator)
-        coordinator.start()
     }
     
     func removeChild(_ coordinator: Coordinator) {

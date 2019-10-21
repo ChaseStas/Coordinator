@@ -9,6 +9,7 @@
 import Foundation
 
 public struct CoordinatorConfig {
+    
     public static var enableLogs: Bool = true
 }
 

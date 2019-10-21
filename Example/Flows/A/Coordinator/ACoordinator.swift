@@ -10,7 +10,7 @@ import Foundation
 import Coordinator
 import UIKit
 
-final class ACoordinator: BaseCoordinator {
+final class ACoordinator: BaseCoordinator<DeepLinkOption> {
     private let factory: AFactoryProtocol = AFactory()
     var router: Router!
     
@@ -18,7 +18,7 @@ final class ACoordinator: BaseCoordinator {
         super.init()
     }
     
-    override func start() {
+    override func start(_ option: DeepLinkOption? = nil) {
         let view = factory.makeMainView()
         configureMainView(view: view)
         self.router = Router(rootForNavController: view)
