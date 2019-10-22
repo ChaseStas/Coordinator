@@ -67,7 +67,8 @@ public extension Router {
         self.navigationRootController.popToRootViewController(animated: animated)
     }
     /// Set view as root of UINavigationController
-    func setRoot(_ view: Presentable, animated: Bool = false) {
+    func setRoot(_ view: Presentable, hideBar: Bool = false, animated: Bool = false) {
+        self.navigationRootController.setNavigationBarHidden(hideBar, animated: false)
         self.navigationRootController.setViewControllers([view.toPresent()], animated: animated)
     }
 }

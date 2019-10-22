@@ -12,6 +12,7 @@ public protocol Coordinator: class {
     
     var childCoordinators: [Coordinator] {get set}
     
+    var router: Router! { get set}
     var onFinish: ((Coordinator) -> Void)? { get set }
 }
 

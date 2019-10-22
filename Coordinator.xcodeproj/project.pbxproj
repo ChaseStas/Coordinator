@@ -28,7 +28,8 @@
 		AB40EE3223475F9A0091070B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB40EE3023475F9A0091070B /* LaunchScreen.storyboard */; };
 		AB40EE3D234760090091070B /* ACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE3C234760090091070B /* ACoordinator.swift */; };
 		AB40EE3F2347602B0091070B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB40EE3E2347602B0091070B /* ApplicationCoordinator.swift */; };
-		AB40EE48234761A10091070B /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40EDEB23475B840091070B /* Coordinator.framework */; };
+		AB566C2D235EF90700702727 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB40EDEB23475B840091070B /* Coordinator.framework */; };
+		AB566C2E235EF90700702727 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB40EDEB23475B840091070B /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB820A79234B3FD000884EF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB820A78234B3FD000884EF7 /* README.md */; };
 		ABBF75D6234CA7E300B9FE12 /* AViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */; };
 		ABBF75DA234CA85F00B9FE12 /* AFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D9234CA85F00B9FE12 /* AFactory.swift */; };
@@ -50,6 +51,20 @@
 			remoteInfo = Coordinator;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB566C2F235EF90700702727 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB566C2E235EF90700702727 /* Coordinator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AB1B8ACB234CB067004D1952 /* AStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AStoryboard.storyboard; sourceTree = "<group>"; };
@@ -104,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB40EE48234761A10091070B /* Coordinator.framework in Frameworks */,
+				AB566C2D235EF90700702727 /* Coordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +323,7 @@
 				AB40EE1F23475F990091070B /* Sources */,
 				AB40EE2023475F990091070B /* Frameworks */,
 				AB40EE2123475F990091070B /* Resources */,
+				AB566C2F235EF90700702727 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

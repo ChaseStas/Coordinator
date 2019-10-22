@@ -10,6 +10,7 @@ import UIKit
 open class BaseCoordinator<T:CaseIterable & Hashable>: Coordinator, DeallocallableProtocol {
     public var childCoordinators: [Coordinator] = []
     public var onFinish: ((Coordinator) -> Void)?
+    public var router: Router!
     
     weak var deallocallable: Deinitcallable?
     
