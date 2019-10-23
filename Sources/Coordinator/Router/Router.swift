@@ -7,6 +7,9 @@
 //
 import UIKit
 
+public typealias NVCPrepareBlock = ((UINavigationController, UIViewController) -> Void)
+public typealias VCPrepareBlock = ((UIViewController, UIViewController) -> Void)
+
 final public class Router: Presentable {
     private weak var rootViewController: UIViewController?  {
         return view?.toPresent()
@@ -19,8 +22,9 @@ final public class Router: Presentable {
         self.view = view
     }
     /// Initialize Router with navigation controller and set view as root
-    public init(rootForNavController view: BaseView) {
+    public init(rootForNavController view: BaseView, hideBar: Bool = false) {
         let nvc = UINavigationController(rootViewController: view.toPresent())
+        nvc.setNavigationBarHidden(hideBar, animated: false)
         self.view = nvc
     }
     
@@ -31,11 +35,12 @@ final public class Router: Presentable {
 
 // MARK: - Present&Dismiss
 public extension Router {
-    func present(_ view: Presentable, animated: Bool = true, presentationStyle: UIModalPresentationStyle? = nil, completion: (() -> Void)? = nil) {
+    func present(_ view: Presentable, animated: Bool = true, prepare: VCPrepareBlock? = nil, presentationStyle: UIModalPresentationStyle? = nil, completion: (() -> Void)? = nil) {
         let v = view.toPresent()
         if let presentationStyle = presentationStyle {
             v.modalPresentationStyle = presentationStyle
         }
+        prepare?(self.rootViewController!, v)
         self.rootViewController?.present(view.toPresent(), animated: animated, completion: completion)
     }
     
@@ -55,8 +60,14 @@ public extension Router {
         return nvc
     }
     
-    func push(_ view: Presentable, animated: Bool = true) {
-        self.navigationRootController.pushViewController(view.toPresent(), animated: animated)
+    /// Uses a horizontal slide transition
+    /// - Parameter view: View to push
+    /// - Parameter animated: TRUE by default
+    /// - Parameter prepare: Prepares presenting view before push
+    func push(_ view: Presentable, animated: Bool = true, prepare: NVCPrepareBlock? = nil) {
+        let nvc = self.navigationRootController, view = view.toPresent()
+        prepare?(nvc, view)
+        self.navigationRootController.pushViewController(view, animated: animated)
     }
     
     func pop(animated: Bool = true) {

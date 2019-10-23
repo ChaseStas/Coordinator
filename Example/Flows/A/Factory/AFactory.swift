@@ -18,7 +18,6 @@ struct AFactory: Factory, AFactoryProtocol {
     }
     
     func makeMainView() -> AViewOutput {
-        storyboard.instantiateViewController(withIdentifier: "AViewController") as! AViewOutput
+        AViewController.controllerInStoryboard(storyboard)
     }
-    
 }

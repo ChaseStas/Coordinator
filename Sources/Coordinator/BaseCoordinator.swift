@@ -43,3 +43,9 @@ public extension BaseCoordinator {
         deallocallable = object
     }
 }
+
+extension BaseCoordinator: Presentable {
+    public func toPresent() -> UIViewController {
+        return router.toPresent()
+    }
+}

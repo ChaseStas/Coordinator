@@ -33,6 +33,8 @@
 		AB820A79234B3FD000884EF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB820A78234B3FD000884EF7 /* README.md */; };
 		ABBF75D6234CA7E300B9FE12 /* AViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */; };
 		ABBF75DA234CA85F00B9FE12 /* AFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF75D9234CA85F00B9FE12 /* AFactory.swift */; };
+		ABC3A4A923603CCF00055987 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC3A4A623603CCF00055987 /* NSObject+className.swift */; };
+		ABC3A4AA23603CCF00055987 /* UIViewContorller+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC3A4A723603CCF00055987 /* UIViewContorller+Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		AB820A78234B3FD000884EF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABBF75D5234CA7E300B9FE12 /* AViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewOutput.swift; sourceTree = "<group>"; };
 		ABBF75D9234CA85F00B9FE12 /* AFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFactory.swift; sourceTree = "<group>"; };
+		ABC3A4A623603CCF00055987 /* NSObject+className.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+className.swift"; path = "Sources/Coordinator/Extensions/NSObject+className.swift"; sourceTree = SOURCE_ROOT; };
+		ABC3A4A723603CCF00055987 /* UIViewContorller+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewContorller+Storyboard.swift"; path = "Sources/Coordinator/Extensions/UIViewContorller+Storyboard.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				AB382C62235DD6010053262A /* Coordinator.swift */,
 				AB382C66235DD6020053262A /* CoordinatorConfig.swift */,
 				AB382C65235DD6020053262A /* Deinit.swift */,
+				ABC3A4AC23603CD300055987 /* Extensions */,
 				AB382C71235DD7DE0053262A /* Factory */,
 				AB382C72235DD7E70053262A /* Router */,
 				AB40EDEF23475B850091070B /* Info.plist */,
@@ -264,6 +269,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABC3A4AC23603CD300055987 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABC3A4A623603CCF00055987 /* NSObject+className.swift */,
+				ABC3A4A723603CCF00055987 /* UIViewContorller+Storyboard.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +426,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB382C6A235DD6020053262A /* Factory.swift in Sources */,
+				ABC3A4AA23603CCF00055987 /* UIViewContorller+Storyboard.swift in Sources */,
 				AB382C69235DD6020053262A /* BaseView.swift in Sources */,
 				AB382C70235DD6020053262A /* Router.swift in Sources */,
+				ABC3A4A923603CCF00055987 /* NSObject+className.swift in Sources */,
 				AB382C6B235DD6020053262A /* Coordinator.swift in Sources */,
 				AB382C6F235DD6020053262A /* CoordinatorConfig.swift in Sources */,
 				AB382C6E235DD6020053262A /* Deinit.swift in Sources */,

@@ -20,9 +20,7 @@ final class ACoordinator: BaseCoordinator<DeepLinkOption> {
     override func start(_ option: DeepLinkOption? = nil) {
         let view = factory.makeMainView()
         configureMainView(view: view)
-        let nvc = UINavigationController()
-        self.router = Router(nvc)
-        self.router.setRoot(view)
+        self.router = Router(rootForNavController: view)
         
         self.setDeallocallable(with: view)
     }
@@ -50,7 +48,7 @@ private extension ACoordinator {
             self?.removeChild(coord)
         }
         self.addChildAndStart(newCoord)
-        router.present(newCoord.router, animated: true, presentationStyle: fullScreen ? .fullScreen : .pageSheet, completion: nil)
+        router.present(newCoord, animated: true, presentationStyle: fullScreen ? .fullScreen : .pageSheet, completion: nil)
     }
     
     func pushToNewScreen() {
